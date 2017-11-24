@@ -1,0 +1,36 @@
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.*;
+/*import com.google.common.base.Function;
+import java.awt.List;
+import org.openqa.selenium.support.ui.Select;*/
+
+
+public class GoogleApp {
+
+	public static void main(String[] args) throws InterruptedException {
+		System.setProperty("webdriver.chrome.driver", "D:\\selenium\\chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		driver.get("https://www.google.co.in");
+       driver.findElement(By.id("lst-ib")).sendKeys("valuemomentum");
+       driver.findElement(By.id("lst-ib")).submit();
+       Thread.sleep(5000);
+       driver.findElement(By.xpath("//*[text()='ValueMomentum | IT Services & Software']")).click();
+       driver.get("https://www.valuemomentum.com/search/");
+       driver.findElement(By.xpath("//*[@id=\"main\"]/form/label/input"));
+       WebElement element1=driver.findElement(By.xpath("//*[@id=\"main\"]/form/label/input"));
+       element1.sendKeys("test automation");
+       driver.findElement(By.className("search-submit")).click();
+      driver.findElement(By.xpath("//*[@id=\"main\"]/header"));
+      //driver.findElement(By.containstext("Search Results for: test automation");
+       
+       
+	
+		
+		
+
+	}
+
+}
